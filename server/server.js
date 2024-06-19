@@ -13,7 +13,7 @@ const httpServer = createServer(app);
 
 let port = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, '/client/dist')).replace('/server', '')); // Adjust the path to your client build directory
+app.use(express.static(path.join(__dirname, '/client/dist').replace('/server', ''))); // Adjust the path to your client build directory
 
 console.log("server started");
 
