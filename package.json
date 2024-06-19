@@ -1,17 +1,25 @@
 {
-  "type": "module",
+  "name": "wsocket_deploy_joint",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-client": "cd client && vite build",
+    "server": "cd server && node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
     "express": "^4.19.2",
-    "socket.io": "^4.7.5"
+    "socket.io": "^4.7.5",
+    "vite": "^5.3.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.3",
-    "vite": "^5.2.0"
-  },
-  "scripts": {
-    "start": "cd client; npm i; npm run build; cd ..;",
-    "hero": "heroku local",
-    "server": "nodemon server.js",
-    "client": "cd client; npm run dev"
+    "vite": "^5.2.0",
+    "socket.io-client": "^4.7.5",
+    "uuid": "^10.0.0"
   }
 }
