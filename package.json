@@ -10,6 +10,7 @@
   },
   "scripts": {
     "start": "npm run build",
+    "hero": "heroku local",
     "server": "nodemon server.js",
     "client": "cd client; npm run dev",
     "build": "NODE_ENV=PROD URL=https://saskanupe-b0a033b8892a.herokuapp.com/ cd client; npm run build; cd ..; nodemon server.js"
