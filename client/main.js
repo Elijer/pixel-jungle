@@ -5,7 +5,7 @@ const playerId = () => localStorage.getItem('playerId') || localStorage.setItem(
 
 
 let socketAddress = "ws://localhost:3000"
-if (window.location.hostname !== "localhost"){
+if (process.env.BASE_URL && process.env.PORT){
   socketAddress = `ws://${process.env.BASE_UR}:${process.env.PORT}`
 }
 
