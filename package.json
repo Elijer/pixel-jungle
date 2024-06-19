@@ -9,7 +9,7 @@
     "vite": "^5.2.0"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "cd client; npm i; npm run build; cd ..;",
     "hero": "heroku local",
     "server": "nodemon server.js",
     "client": "cd client; npm run dev"
