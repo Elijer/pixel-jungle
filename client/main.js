@@ -11,7 +11,7 @@ const playerId = () => localStorage.getItem('playerId') || localStorage.setItem(
 //   console.log(`Attempting to connect to ${socketAddress}`)
 // }
 
-const socketAddress = "ws://localhost:3000"
+let socketAddress = "ws://localhost:3000"
 if (window.location.hostname !== "localhost"){
   socketAddress = "https://saskanupe-b0a033b8892a.herokuapp.com/"
 }
