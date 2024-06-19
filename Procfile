@@ -1,1 +1,1 @@
-web: "npm run hero"
+web: npm start

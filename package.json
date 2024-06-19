@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-client": "cd client && npm run build",
     "server": "cd server && node server.js",
-    "hero": "npm run build-client && npm run server"
+    "start": "npm run build-client && npm run server"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +22,8 @@
     "vite": "^5.2.0",
     "socket.io-client": "^4.7.5",
     "uuid": "^10.0.0"
+  },
+  "engines": {
+    "node": "22.3.0"
   }
 }
