@@ -37,7 +37,7 @@ io.on("connection", (socket) => {
 });
 
 // Serve the client HTML file for any other route
-app.get('*', (req, res) => {
+app.get('/app', (req, res) => {
   // res.sendFile(path.join(__dirname, 'client/dist', 'index.html')); // Adjust the path to your index.html
   res.sendFile(path.resolve(__dirname, '..', 'client', 'dist', 'index.html'));
 });
