@@ -1,15 +1,9 @@
 import { io } from "socket.io-client";
 import { v4 as uuidv4 } from 'uuid';
 
-const playerId = () => localStorage.getItem('playerId') || localStorage.setItem('playerId', uuidv4())
+// YES
 
-// let port = process.env.PORT ? process.env.PORT : '3000'
-// let baseURL = process.env.PROD ? 'https://saskanupe-b0a033b8892a.herokuapp.com/' : "localhost"
-// let socketAddress = `ws://${baseURL}:${port}`
-// if (process.env.BASE_URL && process.env.PORT){
-//   socketAddress = `ws://${process.env.BASE_URL}:${port}`
-//   console.log(`Attempting to connect to ${socketAddress}`)
-// }
+const playerId = () => localStorage.getItem('playerId') || localStorage.setItem('playerId', uuidv4())
 
 let socketAddress = "ws://localhost:3000"
 if (window.location.hostname !== "localhost"){
