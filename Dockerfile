@@ -12,7 +12,7 @@ FROM node:${NODE_VERSION}-alpine
 ENV NODE_ENV production
 
 
-WORKDIR /usr/src/app
+WORKDIR /code
 
 # Copy the rest of the source files into the image.
 COPY . .
