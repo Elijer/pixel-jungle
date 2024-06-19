@@ -13,7 +13,9 @@ const httpServer = createServer(app);
 
 let port = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, '/client/dist').replace('/server', ''))); // Adjust the path to your client build directory
+// app.use(express.static(path.join(__dirname, '/client/dist').replace('/server', ''))); // Adjust the path to your client build directory
+// Serve static files from the client/dist directory
+app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
 
 console.log("server started");
 
@@ -36,7 +38,8 @@ io.on("connection", (socket) => {
 
 // Serve the client HTML file for any other route
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/dist', 'index.html')); // Adjust the path to your index.html
+  // res.sendFile(path.join(__dirname, 'client/dist', 'index.html')); // Adjust the path to your index.html
+  res.sendFile(path.resolve(__dirname, '..', 'client', 'dist', 'index.html'));
 });
 
 httpServer.listen(port, () => {
