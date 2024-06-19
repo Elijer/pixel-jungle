@@ -3,7 +3,11 @@ import { v4 as uuidv4 } from 'uuid';
 
 const playerId = () => localStorage.getItem('playerId') || localStorage.setItem('playerId', uuidv4())
 
+
 let socketAddress = "ws://localhost:3000"
+if (window.location.hostname !== "hostname"){
+  socketAddress = `ws://${process.env.BASE_UR}:${process.env.PORT}`
+}
 
 const  socket = io(socketAddress)
 
