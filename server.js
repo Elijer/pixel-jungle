@@ -11,6 +11,8 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const httpServer = createServer(app);
 
+let port = process.env.PORT || 3000;
+
 app.use(express.static(path.join(__dirname, 'client/dist'))); // Adjust the path to your client build directory
 
 console.log("server started");
@@ -37,6 +39,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/dist', 'index.html')); // Adjust the path to your index.html
 });
 
-httpServer.listen(3000, () => {
+httpServer.listen(port, () => {
   console.log("Listening on port 3000");
 });
