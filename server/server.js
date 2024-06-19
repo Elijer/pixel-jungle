@@ -27,20 +27,18 @@ const io = new Server(httpServer, {
   }
 });
 
-// io.on("connection", (socket) => {
-//   console.log("Websocket connected", socket.id);
+io.on("connection", (socket) => {
+  console.log("Websocket connected", socket.id);
 
-//   socket.on("message", (msg) => {
-//     console.log("Message received:", msg);
-//     io.emit("hi", msg + " -> signed by server");
-//   });
-// });
+  socket.on("message", (msg) => {
+    console.log("Message received:", msg);
+    io.emit("hi", msg + " -> signed by server");
+  });
+});
 
-// Serve the client HTML file for any other route
 app.get('/app', (req, res) => {
   res.send('GET request to the homepage')
-  // res.sendFile(path.join(__dirname, 'client/dist', 'index.html')); // Adjust the path to your index.html
-  // res.sendFile(path.resolve(__dirname, '..', 'client', 'dist', 'index.html'));
+  res.sendFile(path.resolve(__dirname, '..', 'client', 'dist', 'index.html'));
 });
 
 httpServer.listen(port, () => {
