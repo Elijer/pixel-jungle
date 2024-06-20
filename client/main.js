@@ -7,7 +7,7 @@ const playerId = () => localStorage.getItem('playerId') || localStorage.setItem(
 
 let socketAddress = "ws://localhost:3000"
 if (window.location.hostname !== "localhost"){
-  socketAddress = "https://pixel-jungle.rcdis.co/"
+  socketAddress = "https://welcometothejungle.rcdis.co/"
   // socketAddress = "https://saskanupe-b0a033b8892a.herokuapp.com/"
 }
 
