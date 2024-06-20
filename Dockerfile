@@ -14,7 +14,6 @@ ENV NODE_ENV production
 
 WORKDIR /usr/src/app
 
-# Copy the rest of the source files into the image.
 COPY . .
 
 # Download dependencies as a separate step to take advantage of Docker's caching.
